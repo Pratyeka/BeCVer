@@ -9,9 +9,11 @@ train_epoch = 1000
 batch_size = 100
 display_step = 1
 
+# 数据占位节点
 image = tf.placeholder(tf.float32, [None, 784])
 label = tf.placeholder(tf.float32, [None, 10])
 
+# 全连接方式的神经网络
 W = tf.Variable(tf.random_normal([784,10], mean=0.1, stddev=1))
 b = tf.Variable(tf.random_normal([10], mean=0, stddev=1))
 
